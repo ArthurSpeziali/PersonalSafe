@@ -29,4 +29,4 @@ Digite o comando "python3 PersonalSafe.py".
 Segue as instruções do programa que não tem erro! Se quiser fechar, de um CTRL + C!
 
 *- Dica Bonûs:
-Recomenda-se que deixe em um servidor 24/7 com a permisão de escrita e leitura restringida.
+Recomenda-se que deixe em um servidor 24/7 com a permisão de escrita e leitura restringida dos arquivos.

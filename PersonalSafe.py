@@ -67,12 +67,22 @@ def clear_os():
 
 #Função para salvar um dicionário em um .json:
 def salvar_json(users: dict):
+    os.chmod('users.json', 0o777)
     with open('users.json', 'w') as users_json:
-        json.dump(users, users_json)
+        json.dump(users, users_json)        
+    os.chmod('users.json', 0o770)
+
+#Defini as permisões ao máximo, do arquivo.
+#Feito para quando o usuário não tem permisão para abrir "users.json".
+#Já que o Python utiliza das mesmas permisões que o usuário tem.
+os.chmod('users.json', 0o777)
 
 #Abre o .json, como um dicionário:
 with open('users.json') as users_json:
     user_data = json.load(users_json)
+
+#Volta as permisões a 0, para o usuário não ter acesso ao banco de dados:
+os.chmod('users.json', 0o770)
 
 #Um ciclo While para nunca sair do programa, somente quando pressionado CTRL + C:
 while True:

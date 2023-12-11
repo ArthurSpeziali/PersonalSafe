@@ -201,12 +201,12 @@ while True:
                         
                 while True:
                     clear_os()
-                    print('Deseja escrever, visualizar, excluir, editar ou manipular grupos? [W/R/X/E/G]. Digite ".." para voltar ao menu anterior!\n')
+                    print('Deseja escrever, visualizar, excluir, editar, manipular grupos ou excluir este usuário? [W/R/X/E/G/U]. Digite ".." para voltar ao menu anterior!\n')
 
                     while True:
                         opção = input('> ').strip().lower()
                         
-                        if opção != 'w' and opção != 'r' and opção != 'x' and opção != 'e' and opção != 'g' and opção != '..':
+                        if opção != 'w' and opção != 'r' and opção != 'x' and opção != 'e' and opção != 'g' and opção != 'u' and opção != '..':
                             print('\nOpção inválida, tente novamente!\n')
                             
                         else:
@@ -214,6 +214,46 @@ while True:
                     
                     if opção == '..':
                         break
+                    
+                    elif opção == 'u':
+                        while True:
+                            clear_os()
+                            print('Deseja realmente excluir todo este usuário, grupo, tags e chaves? [S/N].\n')
+                            
+                            while True:
+                                opção = input('> ').strip().lower()
+                                
+                                if opção == 's' or opção == 'n':
+                                    break
+                                
+                                else:
+                                    print('\nOpção inválida, tente novamente!\n')
+                                    
+                            if opção == 'n':
+                                break
+                            
+                            elif opção == 's':
+                                clear_os()
+                                print('Digite sua senha:\n')                                
+                                user_pwd = input('> ').strip().lower()
+                                
+                                if user_pwd == user_data[user_name]['pwd']:
+                                    clear_os()
+                                    
+                                    user_data.pop(user_name)
+                                    salvar_json(user_data)
+                                    print('\nConcluido!')
+                                    enter = input('Pressine ENTER para sair.')
+                                    exit()
+                                    
+                                    
+                                else:
+                                    print('\nSenha inválida!')
+                                    enter = input('Pressine ENTER para continuar!')
+                                    clear_os()
+                                    break
+                            
+
                     
                     elif opção == 'g':                        
                         while True:                            
@@ -613,6 +653,7 @@ Não se esqueça de conferir a página do projeto (https://github.com/ArthurSpez
                             clear_os()
                             print('Cadastro realizado com êxito, reinicie e logue na sua conta!')
                             enter = input('Pressine ENTER para continuar!')
+                            clear_os()
                             break                                                    
                             
                         else:

@@ -21,9 +21,13 @@ Baixe o arquivo .tar oficial do Python (Preferencialmente o python3.12), e desco
 Edite o arquivo "creds.py", colocando as suas informações de Email e senhas.
 
 4- Inicie o arquivo.
-No Windows e Linux:
+No Windows:
 Navegue até a pasta do repósitorio e acesse o terminal do seu sistema nesta pasta.
 Digite o comando "python3 PersonalSafe.py".
+
+Linux:
+Navegue até a pasta do repósitorio e acesse o terminal do seu sistema nesta pasta.
+Digite o comando "sudo python3 PersonalSafe.py".
 
 5- Pronto! Só aproveitar!
 Segue as instruções do programa que não tem erro! Se quiser fechar, de um CTRL + C!

@@ -1,7 +1,7 @@
 #Coloque o seu Email aqui:
-usuario = 'arthur.speziali2022@gmail.com'
+usuario = 'seu_email_de_provedor@gmail.com'
 #Coloque a senha do seu Email aqui:
-senha = 'viyh fejn rdvo wbsi'
+senha = 'sua_senha_de_email'
 
 #OBS: Se tiver erros mesmo as credencias tiverem certas, ou não confia no programa...
 #Pode se utilizar as "Senhas de Apps" do G-mail (). Precisa ativar a V2E.

@@ -409,7 +409,7 @@ while True:
                                         print('Digite a chave da tag:')
                                         
                                         while True:
-                                            chave = input('>').strip()
+                                            chave = input('> ').strip()
                                             if chave != '' and chave != ' ' and chave != '..':
                                                 content.update({tag: chave})
                                                 salvar_json(user_data)

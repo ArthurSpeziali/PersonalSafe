@@ -163,7 +163,7 @@ while True:
                 #Depois de atribuir o valor nos grupos, adiciona em uma lista.
                 #Se o usuário digitar um número, constará que não existe este item, depois vai para outra verificação.
                 #Vai verificar se ele cabe dentro da lista, e atribui-lo ao item no index do número:
-                print('Qual grupo escolher? Digite ".." para voltar ao menu anterior:')    
+                print('Qual grupo escolher? Digite ".." para voltar ao menu anterior!')    
                 contador = 1
                 group_list = list()
                 for group, cont in user_data[user_name]['cont'].items():
@@ -280,6 +280,9 @@ while True:
                                         
                                         while True:
                                             group = input('> ').strip().lower()
+
+                                            if group == '..':
+                                                break
                                             
                                             #Verifica se existe esse grupo, e usa o .pop, para exclui-lo:
                                             if group in user_data[user_name]['cont']:
@@ -328,7 +331,7 @@ while True:
                                 elif opção == 'e':
                                     while True:
                                         clear_os()
-                                        print('Digite o nome do grupo:\n')
+                                        print('Digite o nome do grupo. Digite ".." para voltar ao menu anterior!\n')
                                         
                                         while True:
                                             group = input('> ').strip().lower()
@@ -348,7 +351,7 @@ while True:
                                                                                                                     
                                         while True:
                                             clear_os()
-                                            print('Digite o novo nome do grupo:\n')
+                                            print('Digite o novo nome do grupo. Digite ".." para voltar ao menu anterior!\n')
                                             
                                             while True:
                                                 group_rename = input('> ').strip().lower()

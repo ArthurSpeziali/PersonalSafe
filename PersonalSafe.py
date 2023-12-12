@@ -610,7 +610,7 @@ while True:
     elif opção == 'r':
         clear_os()
         while True:
-            print('Digite seu novo nome de úsuario:')
+            print('Digite seu novo nome de úsuario. Digite ".." para voltar ao menu anterior!')
             register_name = input('> ').strip().lower()
             
             if register_name == '..':

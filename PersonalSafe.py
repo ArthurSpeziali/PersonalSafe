@@ -1,7 +1,11 @@
-#Impoetanto as bibliotecas:
-from creds import usuario, senha
-from time import sleep
+#Importanto as bibliotecas:
 import os
+
+os.chmod('creds.py', 0o777)
+from creds import usuario, senha
+os.chmod('creds.py', 0o770)
+
+from time import sleep
 import random
 import platform
 import json
